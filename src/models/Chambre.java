@@ -47,6 +47,13 @@ public class Chambre {
         this.etat = etat;
     }
 
+    @Override
+    public String toString() {
+        String newLine = System.getProperty("line.separator");
+        return "Chambre "+ id + newLine + "id       :" + id + newLine + "etage    :" + etage  + newLine +  "numero   :" + numero + newLine + "pavillon :" + pavillon + newLine + "type     :"
+                + type;
+    }
+
     //private Etudiant[] etudiants;
 
     /* public int getId() {

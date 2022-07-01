@@ -20,14 +20,18 @@ public class ServiceTableau implements IService {
             chambre.setNumero(this.generateNumero("CH",chambre.getId()));
             tabChambre[indexChambre] = chambre;
             indexChambre++;
+            System.out.println("Nouvelle chambre ajouté.");
+        }else {
+            System.out.println("Tableau de chambres plein.");
         }
     }
 
     @Override
     public void listerChambre() {
         for (Chambre chambre : tabChambre) {
-            if (chambre != null) {
+            if (chambre != null && chambre.isEtat()) {
                 System.out.println(chambre);
+                System.out.println("");
             }
         }
     }
@@ -68,8 +72,9 @@ public class ServiceTableau implements IService {
     @Override
     public void listerPavillon() {
         for (Pavillon pavillon : tabPavillon) {
-            if (pavillon != null) {
+            if (pavillon != null && pavillon.isEtat()) {
                 System.out.println(pavillon);
+                System.out.println("");
             }
         }
         
@@ -77,7 +82,6 @@ public class ServiceTableau implements IService {
 
     @Override
     public int getPositionPavillon(int id) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
@@ -89,8 +93,8 @@ public class ServiceTableau implements IService {
 
     @Override
     public void affecterChambrePavillon(int id, Chambre chambre) {
-        // TODO Auto-generated method stub
-        
+        Pavillon pavillon = tabPavillon[id-1];
+        chambre.setPavillon(pavillon);
     }
 
     @Override

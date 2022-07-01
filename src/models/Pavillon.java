@@ -68,7 +68,8 @@ public class Pavillon {
 
     @Override
     public String toString() {
-        return "Pavillon [etat=" + etat + ", id=" + id + ", nombreEtage=" + nombreEtage + ", numero=" + numero + "]";
+        String newLine = System.getProperty("line.separator");
+        return "Pavillon" + id + newLine +"id          :" + id + newLine +"numero      :" + numero + newLine + "nombreEtage :" + nombreEtage;
     }
 
 }
