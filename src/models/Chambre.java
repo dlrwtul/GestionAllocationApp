@@ -4,7 +4,7 @@ public class Chambre {
 
     private int id;
     private String numero;
-    private String etat;
+    private boolean etat = true;
     private TypeChambre type;
     private TypeEtage etage;
     private Pavillon pavillon;
@@ -21,12 +21,7 @@ public class Chambre {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    public String getEtat() {
-        return etat;
-    }
-    public void setEtat(String etat) {
-        this.etat = etat;
-    }
+    
     public TypeChambre getType() {
         return type;
     }
@@ -44,6 +39,12 @@ public class Chambre {
     }
     public void setPavillon(Pavillon pavillon) {
         this.pavillon = pavillon;
+    }
+    public boolean isEtat() {
+        return etat;
+    }
+    public void setEtat(boolean etat) {
+        this.etat = etat;
     }
 
     //private Etudiant[] etudiants;
