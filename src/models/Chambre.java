@@ -4,13 +4,51 @@ public class Chambre {
 
     private int id;
     private String numero;
-    private String numeroEtage;
-    private String type;
     private String etat;
+    private TypeChambre type;
+    private TypeEtage etage;
     private Pavillon pavillon;
-    private Etudiant[] etudiants;
 
     public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getNumero() {
+        return numero;
+    }
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+    public String getEtat() {
+        return etat;
+    }
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+    public TypeChambre getType() {
+        return type;
+    }
+    public void setType(TypeChambre type) {
+        this.type = type;
+    }
+    public TypeEtage getEtage() {
+        return etage;
+    }
+    public void setEtage(TypeEtage etage) {
+        this.etage = etage;
+    }
+    public Pavillon getPavillon() {
+        return pavillon;
+    }
+    public void setPavillon(Pavillon pavillon) {
+        this.pavillon = pavillon;
+    }
+
+    //private Etudiant[] etudiants;
+
+    /* public int getId() {
         return this.id;
     }
 
@@ -26,13 +64,6 @@ public class Chambre {
         this.numero = numero;
     }
 
-    public String getNumeroEtage() {
-        return this.numeroEtage;
-    }
-
-    public void setNumeroEtage(String numeroEtage) {
-        this.numeroEtage = numeroEtage;
-    }
 
     public String getType() {
         return this.type;
@@ -56,9 +87,9 @@ public class Chambre {
 
     public void setPavillon(Pavillon pavillon) {
         this.pavillon = pavillon;
-    }
+    } */
 
-    public Etudiant[] getEtudiants() {
+    /* public Etudiant[] getEtudiants() {
         return this.etudiants;
     }
 
@@ -78,6 +109,6 @@ public class Chambre {
         }
 
         this.etudiants = array;
-    }
+    } */
     
 }

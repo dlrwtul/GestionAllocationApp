@@ -7,10 +7,6 @@ public class Etudiant extends Personne {
     private String email;
     private String telephone;
     private Date dateNaissance;
-    private String bourse;
-    private String adresse;
-    private Type[] types;
-    private Chambre chambre;
     
     public String getMatricule() {
         return this.matricule;
@@ -44,7 +40,7 @@ public class Etudiant extends Personne {
         this.dateNaissance = dateNaissance;
     }
 
-    public String getBourse() {
+    /* public String getBourse() {
         return this.bourse;
     }
 
@@ -88,7 +84,7 @@ public class Etudiant extends Personne {
 
     public void setChambre(Chambre chambre) {
         this.chambre = chambre;
-    }
+    } */
 
 }
 

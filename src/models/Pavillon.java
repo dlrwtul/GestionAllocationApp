@@ -3,10 +3,10 @@ package models;
 public class Pavillon {
     
     private int id;
-    private int numero;
+    private String numero;
     private int nombreEtage;
-    private int etat;
-    private Chambre[] chambres;
+    private boolean etat = true ;
+    //private Chambre[] chambres;
 
     public int getId() {
         return this.id;
@@ -16,12 +16,20 @@ public class Pavillon {
         this.id = id;
     }
 
-    public int getNumero() {
-        return this.numero;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public boolean isEtat() {
+        return etat;
+    }
+
+    public void setEtat(boolean etat) {
+        this.etat = etat;
     }
 
     public int getNombreEtage() {
@@ -32,14 +40,7 @@ public class Pavillon {
         this.nombreEtage = nombreEtage;
     }
 
-    public int getEtat() {
-        return this.etat;
-    }
-
-    public void setEtat(int etat) {
-        this.etat = etat;
-    }
-    public void setChambres(Chambre[] chambres) {
+    /* public void setChambres(Chambre[] chambres) {
         this.chambres = chambres;
     }
     
@@ -63,6 +64,11 @@ public class Pavillon {
         }
 
         this.chambres = array;
+    } */
+
+    @Override
+    public String toString() {
+        return "Pavillon [etat=" + etat + ", id=" + id + ", nombreEtage=" + nombreEtage + ", numero=" + numero + "]";
     }
 
 }
